@@ -1,0 +1,43 @@
+--- device/htc/bravo/ev.mk	2012-09-19 20:14:27.162614865 +0200
++++ vendor/napodan/products/small_bravo.mk	2012-09-19 23:22:44.162847115 +0200
+@@ -4,12 +4,20 @@
+ $(call inherit-product, device/htc/bravo/full_bravo.mk)
+ 
+ # Inherit some common evervolv stuff.
+-$(call inherit-product, vendor/ev/config/common_full_phone.mk)
++$(call inherit-product, vendor/napodan/products/common.mk)
++$(call inherit-product, vendor/ev/config/common_small.mk)
++
++# Bring in prebuilt gapps
++include vendor/napodan/prebuilt/gapps/gapps.mk
++
++# Bring in some prebuilt app
++include vendor/napodan/prebuilt/applications.mk
++
+ 
+ #
+ # Setup device specific product configuration.
+ #
+-PRODUCT_NAME    := ev_bravo
++PRODUCT_NAME    := small_bravo
+ PRODUCT_BRAND   := htc_wwe
+ PRODUCT_DEVICE  := bravo
+ PRODUCT_MODEL   := HTC Desire
+@@ -19,15 +27,8 @@
+ #
+ # Set up the product codename, build version & MOTD.
+ #
+-PRODUCT_CODENAME := Turba
++PRODUCT_CODENAME := Elsa
+ PRODUCT_VERSION_DEVICE_SPECIFIC := p8
+ 
+-PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank you for choosing Evervolv for your HTC Desire\nPlease visit us at \#evervolv on irc.freenode.net\nFollow @preludedrew for the latest Evervolv updates\nGet the latest rom at evervolv.com\n------------------------------------------------\n"
+-
+-# Copy compatible bootanimation
+-PRODUCT_COPY_FILES += \
+-    vendor/ev/prebuilt/wvga/media/bootanimation.zip:system/media/bootanimation.zip
+-#    device/htc/passion/extras/bootanimation_passion_ics.zip:system/media/bootanimation.zip
++PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank you for choosing this rom based on Evervolv for your HTC Desire\nPlease visit evervolv at \#evervolv on irc.freenode.net\n------------------------------------------------\n"
+ 
+-# Hot reboot
+-PRODUCT_PACKAGE_OVERLAYS += vendor/ev/overlay/hot_reboot
