@@ -1,10 +1,18 @@
 --- device/htc/bravo/ev.mk	2012-09-19 20:14:27.162614865 +0200
-+++ vendor/napodan/products/small_bravo.mk	2012-09-19 23:22:44.162847115 +0200
-@@ -4,12 +4,20 @@
- $(call inherit-product, device/htc/bravo/full_bravo.mk)
++++ vendor/napodan/products/small_bravo.mk	2012-09-20 20:54:26.683860118 +0200
+@@ -1,15 +1,30 @@
+ # Call this first so apn list is actually copied
+ $(call inherit-product, vendor/ev/config/gsm.mk)
+ 
+-$(call inherit-product, device/htc/bravo/full_bravo.mk)
++# Inherit from those products. Most specific first.
++# replace device/htc/bravo/full_bravo.mk
++$(call inherit-product, device/htc/bravo/bravo_eu.mk)
++$(call inherit-product, $(SRC_TARGET_DIR)/product/small_base_telephony.mk)
  
  # Inherit some common evervolv stuff.
 -$(call inherit-product, vendor/ev/config/common_full_phone.mk)
++# replace vendor/ev/config/common_full_phone.mk
 +$(call inherit-product, vendor/napodan/products/common.mk)
 +$(call inherit-product, vendor/ev/config/common_small.mk)
 +
@@ -14,6 +22,9 @@
 +# Bring in some prebuilt app
 +include vendor/napodan/prebuilt/applications.mk
 +
++PRODUCT_PACKAGE_OVERLAYS := vendor/napodan/overlay
++
++PRODUCT_LOCALES := en_US fr_FR en_GB
  
  #
  # Setup device specific product configuration.
@@ -23,7 +34,7 @@
  PRODUCT_BRAND   := htc_wwe
  PRODUCT_DEVICE  := bravo
  PRODUCT_MODEL   := HTC Desire
-@@ -19,15 +27,8 @@
+@@ -19,15 +34,8 @@
  #
  # Set up the product codename, build version & MOTD.
  #

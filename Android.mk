@@ -20,7 +20,6 @@ else
 		echo 'ui_print("Installing Data");' >> META-INF/com/google/android/updater-script; \
 		echo 'package_extract_dir("data", "/data");' >> META-INF/com/google/android/updater-script; \
 		echo 'unmount("/data");' >> META-INF/com/google/android/updater-script; \
-		mv system/app/Launcher2.apk data/app; \
 		zip -r ../$(NOM_ZIP).zip .;
 	java -Xmx1024m -jar out/host/linux-x86/framework/signapk.jar \
 		-w build/target/product/security/testkey.x509.pem \

@@ -1,5 +1,5 @@
---- vendor/ev/config/common.mk	2012-09-19 23:01:19.762858625 +0200
-+++ vendor/napodan/products/common.mk	2012-09-19 23:28:22.603197502 +0200
+--- vendor/ev/config/common.mk	2012-09-19 23:34:34.923348774 +0200
++++ vendor/napodan/products/common.mk	2012-09-20 00:17:39.452926081 +0200
 @@ -1,4 +1,4 @@
 -PRODUCT_BRAND ?= evervolv
 +PRODUCT_BRAND ?= napodan
