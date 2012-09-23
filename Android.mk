@@ -1,3 +1,7 @@
+#Adding a link from busybox to vi
+ALL_MODULES.busybox.INSTALLED := \
+    $(ALL_MODULES.busybox.INSTALLED) /system/xbin/vi
+
 DATE_ZIP := $(shell date +%Y%m%d_%H%M%S)
 
 NOM_ZIP := jelly_$(DATE_ZIP)
@@ -6,9 +10,8 @@ ifneq ($(TARGET_CUSTOM_RELEASETOOL),)
 	@echo "Running custom releasetool..."
 	$(hide) $(TARGET_CUSTOM_RELEASETOOL)
 else
-	mv $(INTERNAL_OTA_PACKAGE_TARGET) $(PRODUCT_OUT)/$(TARGET_PRODUCT)-ota-$(FILE_NAME_TAG).zip
 	@echo "Running releasetool..."
-	$(hide) ./vendor/cm/tools/squisher
+	$(hide) OTAPACKAGE=$(PWD)/$(INTERNAL_OTA_PACKAGE_TARGET) ./vendor/cm/tools/squisher
 	cd $(PRODUCT_OUT); \
 		[[ -d repack ]] && \rm -rf repack; \
 		mkdir -p repack/data/app; \
