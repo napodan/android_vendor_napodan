@@ -1,5 +1,5 @@
 --- device/htc/bravo/ev.mk	2012-09-19 20:14:27.162614865 +0200
-+++ vendor/napodan/products/small_bravo.mk	2012-09-20 20:54:26.683860118 +0200
++++ vendor/napodan/products/small_bravo.mk	2012-09-22 22:58:45.680907478 +0200
 @@ -1,15 +1,30 @@
  # Call this first so apn list is actually copied
  $(call inherit-product, vendor/ev/config/gsm.mk)
@@ -24,7 +24,7 @@
 +
 +PRODUCT_PACKAGE_OVERLAYS := vendor/napodan/overlay
 +
-+PRODUCT_LOCALES := en_US fr_FR en_GB
++PRODUCT_LOCALES := en_US fr_FR en_GB sw320dp
  
  #
  # Setup device specific product configuration.
