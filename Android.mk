@@ -4,8 +4,7 @@ ALL_MODULES.busybox.INSTALLED := \
 
 DATE_ZIP := $(shell date +%Y%m%d_%H%M%S)
 
-#NOM_ZIP = $(INTERNAL_OTA_PACKAGE_TARGET)_$(DATE_ZIP)
-NOM_ZIP = evervolv_$(DATE_ZIP)
+NOM_ZIP := jelly_$(DATE_ZIP)
 bacon: otapackage
 ifneq ($(TARGET_CUSTOM_RELEASETOOL),)
 	@echo "Running custom releasetool..."
