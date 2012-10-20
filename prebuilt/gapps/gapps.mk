@@ -16,7 +16,6 @@ vendor/napodan/prebuilt/gapps/system/framework/com.google.widevine.software.drm.
 vendor/napodan/prebuilt/gapps/system/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
 vendor/napodan/prebuilt/gapps/system/app/Phonesky.apk:system/app/Phonesky.apk \
 vendor/napodan/prebuilt/gapps/system/app/SetupWizard.apk:system/app/SetupWizard.apk \
-vendor/napodan/prebuilt/gapps/system/app/GmsCore.apk:system/app/GmsCore.apk \
 vendor/napodan/prebuilt/gapps/system/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
 vendor/napodan/prebuilt/gapps/system/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
 vendor/napodan/prebuilt/gapps/system/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
@@ -24,6 +23,5 @@ vendor/napodan/prebuilt/gapps/system/app/GoogleLoginService.apk:system/app/Googl
 vendor/napodan/prebuilt/gapps/system/app/MediaUploader.apk:system/app/MediaUploader.apk \
 vendor/napodan/prebuilt/gapps/system/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
 vendor/napodan/prebuilt/gapps/system/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
-vendor/napodan/prebuilt/gapps/system/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
 vendor/napodan/prebuilt/gapps/system/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
 
