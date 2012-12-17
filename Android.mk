@@ -18,6 +18,18 @@ else
 		mkdir -p repack/data/app; \
 		cd repack; \
 		unzip ../cm-.zip; \
+		mv system/app/VideoEditor.apk data/app/ ; \
+		mv system/app/LiveWallpapers.apk data/app/ ; \
+		mv system/app/Galaxy4.apk data/app/ ; \
+		mv system/app/MagicSmokeWallpapers.apk data/app/ ; \
+		mv system/app/VisualizationWallpapers.apk data/app/ ; \
+		mv system/app/HoloSpiralWallpaper.apk data/app/ ; \
+		mv system/app/EVToolbox.apk data/app/ ; \
+		mv system/app/QuickSearchBox.apk data/app/ ; \
+		mv system/app/ThemeManager.apk data/app/ ; \
+		mv system/app/AndroidTerm.apk data/app/ ; \
+		mv system/app/EVWidgets.apk data/app/ ; \
+		mv system/app/EVTips.apk data/app/ ; \
 		grep -v recovery META-INF/com/google/android/updater-script > /tmp/updater-script; \
 		mv /tmp/updater-script META-INF/com/google/android/updater-script; \
 		echo 'mount("yaffs2", "MTD", "userdata", "/data");' >> META-INF/com/google/android/updater-script; \
