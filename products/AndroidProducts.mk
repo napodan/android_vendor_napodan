@@ -1,3 +1,3 @@
 PRODUCT_MAKEFILES := \
-	device/htc/bravo/ev.mk
+	bravo:device/htc/bravo/ev.mk
 
