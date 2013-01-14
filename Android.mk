@@ -1,3 +1,28 @@
+define add-prebuilt-apk-file
+    $(eval $(include-prebuilt-apk))
+endef
+
+define include-prebuilt-apk
+    include $$(CLEAR_VARS)
+    LOCAL_MODULE := $(1)
+		LOCAL_MODULE_TAGS := optional
+    LOCAL_MODULE_CLASS := ETC
+		LOCAL_MODULE_PATH := $(TARGET_OUT_APPS)
+    LOCAL_SRC_FILES := $(1)
+    include $$(BUILD_PREBUILT)
+endef
+
+define add-prebuilt-apk-files
+$(foreach f,$(1), $(call add-prebuilt-apk-file,$f))
+endef
+
+##include $(call all-subdir-makefiles)
+LOCAL_PATH := $(call my-dir)
+
+#include $(call all-makefiles-under,$(LOCAL_PATH)/prebuilt)
+include $(call first-makefiles-under,$(LOCAL_PATH))
+
+
 #Adding a link from busybox to vi
 ALL_MODULES.busybox.INSTALLED := \
     $(ALL_MODULES.busybox.INSTALLED) /system/xbin/vi
