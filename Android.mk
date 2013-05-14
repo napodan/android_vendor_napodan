@@ -11,7 +11,7 @@ ifneq ($(TARGET_CUSTOM_RELEASETOOL),)
 	$(hide) $(TARGET_CUSTOM_RELEASETOOL)
 else
 	@echo "Running releasetool..."
-	$(hide) OTAPACKAGE=$(PWD)/$(INTERNAL_OTA_PACKAGE_TARGET) ./vendor/cm/tools/squisher
+	$(hide) OTAPACKAGE=$(PWD)/$(INTERNAL_OTA_PACKAGE_TARGET) ./vendor/napodan/tools/squisher
 	cd $(PRODUCT_OUT); \
 		[[ -d repack ]] && \rm -rf repack; \
 		mkdir -p repack/data/app; \
