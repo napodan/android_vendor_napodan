@@ -8,5 +8,5 @@ build()
   [[ -d out ]] && \rm -rf out
   ./bionic/libc/kernel/tools/update_all.py
   ./bionic/libc/tools/gensyscalls.py
-  time make -j oxygen
+  time make -j8 oxygen
 }
