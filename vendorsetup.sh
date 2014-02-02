@@ -16,7 +16,7 @@ build()
   time make -j8 oxygen
 
   # Verification
-  OUTFILE=`echo $OUT/update-oxygen-4.3.0-Bravo-*2013-signed.zip`
+  OUTFILE=`echo $OUT/update-oxygen-4.3.0-Bravo-*2014-signed.zip`
   if [[ -f "$OUTFILE" ]]
   then
       bDate=`date +%Y%m%d_%H%M%S`
