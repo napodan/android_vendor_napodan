@@ -5,6 +5,8 @@
 ## None.
 ###########################################################
 
+KCM := $(HOST_OUT_EXECUTABLES)/kcm$(HOST_EXECUTABLE_SUFFIX)
+
 ifeq ($(strip $(LOCAL_MODULE_CLASS)),)
 LOCAL_MODULE_CLASS := KEYCHARS
 endif
